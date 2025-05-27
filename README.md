@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# EIP-7702 Relaying Transactions Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a demonstration of how to relay transactions using [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702).
 
-Currently, two official plugins are available:
+> ⚠️ **Note:** At the time of this repository's creation, common wallets do **not yet support** the new transaction type introduced in EIP-7702.  
+> As a result, this demo uses a **Private Key Account** instead of a **JSON-RPC Account**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+[View the GitHub Pages site](https://ancient8-gg.github.io/EIP-7702-relaying-transaction-demo)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📁 Project Structure
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- `src/` – Main source code of the page.
+- `src/components/Demo1.tsx` - The basic demo of the EIP-7702's usage.
+- `src/components/Demo2.tsx` - The demo of subscription payment using EIP-7702.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Requirements
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js
+- pnpm
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🚀 Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/ancient8-gg/EIP-7702-relaying-transaction-demo.git
+cd EIP-7702-relaying-transaction-demo
+pnpm install
+pnpm dev
 ```
